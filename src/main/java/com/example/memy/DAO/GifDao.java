@@ -48,7 +48,7 @@ public class GifDao {
 
     public List<gif> findByName(String name) {
         List<gif> results = new ArrayList<>();
-        for (gif gif: results){
+        for (gif gif: gifs){
             if(gif.getName().equals(name))
                 results.add(gif);
         }

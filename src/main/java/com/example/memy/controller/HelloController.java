@@ -2,11 +2,10 @@ package com.example.memy.controller;
 
 
 import com.example.memy.DAO.GifDao;
+import com.example.memy.model.gif;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 public class HelloController {
@@ -14,10 +13,17 @@ public class HelloController {
     GifDao gifDao = new GifDao();
 
     @GetMapping("/")
-    public String hello( ModelMap modelMap){
+    public String hello(ModelMap modelMap){
         modelMap.addAttribute("gifs", gifDao.showAll() );
         return "home";
     }
+
+    @GetMapping("/gifs/search")
+    public String search(@RequestParam String q, ModelMap modelMap){
+    modelMap.addAttribute("gifs",gifDao.findByName(q));
+        return "home";
+    }
+
 
     @GetMapping("/categories")
     public String hello2( ModelMap modelMap){
