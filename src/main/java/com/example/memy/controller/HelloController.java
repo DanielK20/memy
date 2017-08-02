@@ -21,5 +21,10 @@ public class HelloController {
     public String articles(){
         return "articles";
     }
+    @GetMapping("/favorites")
+    public String favorites( ModelMap modelMap){
+        modelMap.addAttribute("gifs", gifDao.isLike() );
+        return "isLike";
+    }
 
 }

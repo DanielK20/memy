@@ -12,12 +12,12 @@ public class GifDao {
     private static List<gif> gifs =new ArrayList<>();
 
     static {
-        gifs.add(new gif("android-explosion"));
-        gifs.add(new gif("ben-and-mike"));
-        gifs.add(new gif("book-dominos"));
-        gifs.add(new gif("compiler-bot"));
-        gifs.add(new gif("cowboy-coder"));
-        gifs.add(new gif("infinite-andrew"));
+        gifs.add(new gif("android-explosion",true));
+        gifs.add(new gif("ben-and-mike",false));
+        gifs.add(new gif("book-dominos",false));
+        gifs.add(new gif("compiler-bot",true));
+        gifs.add(new gif("cowboy-coder",false));
+        gifs.add(new gif("infinite-andrew",false));
 
     }
 
@@ -26,6 +26,15 @@ public class GifDao {
         return gifs;
 
     }
+    public List<gif> isLike(){
+        List<gif> result =new ArrayList<>();
+        for (gif gif:gifs){
+            if(gif.getLike().equals(true))
+                result.add(gif);
+        }
+        return result;
+    }
+
 }
 
 

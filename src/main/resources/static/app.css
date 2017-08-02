@@ -88,8 +88,8 @@ nav ul li.active, nav ul li:hover {
 }
 
 .gifs img {
-    height: 255px;
-    width: 400px;
+    height: 220px;
+    width: 100%;
     border-radius: 6px;
 }
 
@@ -298,9 +298,5 @@ nav ul li.active, nav ul li:hover {
 
     .chip {
         margin-left: 0.8rem;
-    }
-    .padding{
-        padding: 10px;
-        text-align: center;
     }
 }
