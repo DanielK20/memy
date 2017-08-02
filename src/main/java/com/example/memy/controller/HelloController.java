@@ -18,6 +18,13 @@ public class HelloController {
         modelMap.addAttribute("gifs", gifDao.showAll() );
         return "home";
     }
+
+    @GetMapping("/categories")
+    public String hello2( ModelMap modelMap){
+        modelMap.addAttribute("gifs", gifDao.showAll() );
+        return "categories";
+    }
+
     @GetMapping("/articles")
     public String articles(){
         return "articles";
