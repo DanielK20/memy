@@ -301,5 +301,6 @@ nav ul li.active, nav ul li:hover {
     }
     .padding{
         padding: 10px;
+        text-align: center;
     }
 }
