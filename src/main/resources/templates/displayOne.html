@@ -50,6 +50,7 @@
             <a th:href="@{|/gif/${gif.name}|}">
                 <img th:src="@{|/gifs/${gif.name}.gif|}" /><br>
                 <a href="#" th:class="(${gif.Like}? 'un' : '') + 'mark favorite'"></a>
+
             </a>
         </div>
     </div>

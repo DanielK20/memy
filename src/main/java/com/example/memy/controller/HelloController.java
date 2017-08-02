@@ -27,7 +27,7 @@ public class HelloController {
         modelMap.addAttribute("gifs", gifDao.isLike() );
         return "isLike";
     }
-    @GetMapping("/mem/{name}")
+    @GetMapping("/gif/{name}")
     public String displayMem(@PathVariable String name, ModelMap modelMap) {
         System.out.println(name);
         modelMap.addAttribute("gifs", gifDao.findOne(name));
