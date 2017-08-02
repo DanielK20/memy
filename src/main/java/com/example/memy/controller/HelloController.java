@@ -1,6 +1,7 @@
 package com.example.memy.controller;
 
 
+import com.example.memy.DAO.CategoryDao;
 import com.example.memy.DAO.GifDao;
 import com.example.memy.model.gif;
 import org.springframework.stereotype.Controller;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 public class HelloController {
 
     GifDao gifDao = new GifDao();
+    CategoryDao categoryDao = new CategoryDao();
 
     @GetMapping("/")
     public String hello(ModelMap modelMap){
@@ -27,7 +29,7 @@ public class HelloController {
 
     @GetMapping("/categories")
     public String hello2( ModelMap modelMap){
-        modelMap.addAttribute("gifs", gifDao.showAll() );
+        modelMap.addAttribute("categories", categoryDao.showAllCategory() );
         return "categories";
     }
 
