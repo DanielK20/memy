@@ -44,6 +44,16 @@ public class GifDao {
         }
         return result;
     }
+
+
+    public List<gif> findByName(String name) {
+        List<gif> results = new ArrayList<>();
+        for (gif gif: results){
+            if(gif.getName().equals(name))
+                results.add(gif);
+        }
+        return results;
+    }
 }
 
 
