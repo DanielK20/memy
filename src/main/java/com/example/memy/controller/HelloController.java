@@ -43,8 +43,8 @@ public class HelloController {
     }
     @GetMapping("/gif/{name}")
     public String displayMem(@PathVariable String name, ModelMap modelMap) {
-        modelMap.addAttribute("gifs", gifDao.findOne(name));
-        return "displayOne";
+        modelMap.addAttribute("gif", gifDao.findOne(name).get(0));
+        return "gif-details";
     }
     @GetMapping("/category/1")
     public String categoryTopRated(ModelMap modelMap) {
