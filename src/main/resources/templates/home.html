@@ -47,15 +47,8 @@
 
     <div class="gifs container">
         <div class="row">
-
             <h1 th:if="${gifs.isEmpty()}"><b>Nic nie znaleziono</b></h1>
-
-            <div th:each="gif : ${gifs}" class="col s12 l4">
-                <a th:href="@{|/gif/${gif.name}|}">
-                    <img th:src="@{|/gifs/${gif.name}.gif|}" /><br>
-                    <a href="#" th:class="(${gif.Like}? 'un' : '') + 'mark favorite'"></a>
-                </a>
-            </div>
+            <div th:replace="fragments/all :: all"></div>
         </div>
     </div>
 
