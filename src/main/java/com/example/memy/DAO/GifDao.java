@@ -12,12 +12,12 @@ public class GifDao {
     private static List<gif> gifs = new ArrayList<>();
 
     static {
-        gifs.add(new gif("android-explosion", true));
-        gifs.add(new gif("ben-and-mike", false));
-        gifs.add(new gif("book-dominos", false));
-        gifs.add(new gif("compiler-bot", true));
-        gifs.add(new gif("cowboy-coder", false));
-        gifs.add(new gif("infinite-andrew", false));
+        gifs.add(new gif("android-explosion", true,1));
+        gifs.add(new gif("ben-and-mike", false,2));
+        gifs.add(new gif("book-dominos", false,1));
+        gifs.add(new gif("compiler-bot", true,3));
+        gifs.add(new gif("cowboy-coder", false,3));
+        gifs.add(new gif("infinite-andrew", false,3));
 
     }
 
@@ -45,15 +45,6 @@ public class GifDao {
         return result;
     }
 
-
-    public List<gif> findByName(String name) {
-        List<gif> results = new ArrayList<>();
-        for (gif gif: gifs){
-            if(gif.getName().equals(name))
-                results.add(gif);
-        }
-        return results;
-    }
 }
 
 
