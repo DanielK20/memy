@@ -86,14 +86,14 @@ public class GifDao {
             }
         }
 
-        if (name.equals("Newest")) {
+        if(name.equals("Newest")) {
             for (int i = 0; i < gifs.size(); i++) {
                 if (gifs.get(i).getCatId() == 2)
                     results.add(gifs.get(i));
             }
         }
 
-        if (name.equals("Animals")) {
+        if(name.equals("Animals")) {
             for (int i = 0; i < gifs.size(); i++) {
                 if (gifs.get(i).getCatId() == 3)
                     results.add(gifs.get(i));
