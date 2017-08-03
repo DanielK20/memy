@@ -3,9 +3,13 @@ package com.example.memy.controller;
 
 import com.example.memy.DAO.CategoryDao;
 import com.example.memy.DAO.GifDao;
+import com.example.memy.model.category;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+import java.util.Locale;
 
 @Controller
 public class HelloController {
@@ -59,5 +63,11 @@ public class HelloController {
         modelMap.addAttribute("category", categoryDao.showAllCategory().get(2));
         modelMap.addAttribute("gifs", gifDao.findNew());
         return "category";
+    }
+
+    @GetMapping("/api/categories")
+    public List<category> listCategories(){
+        CategoryDao categoryDao = new CategoryDao();
+        return categoryDao.showAllCategory();
     }
 }
