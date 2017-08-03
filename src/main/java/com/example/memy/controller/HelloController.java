@@ -30,6 +30,7 @@ public class HelloController {
     @GetMapping("/gifs/search")
     public String search(@RequestParam String q, ModelMap modelMap){
     modelMap.addAttribute("gifs",gifDao.findByName(q));
+        modelMap.addAttribute("gifs",gifDao.findByNameCat(q));
         return "home";
     }
     @GetMapping("/categories")
