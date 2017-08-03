@@ -46,6 +46,38 @@ public class GifDao {
         }
         return results;
     }
+
+
+    public List<gif> findTopRated() {
+        List<gif> gifsTopRated = new ArrayList<>();
+        for(int i = 0; i < gifs.size();i++) {
+            if (gifs.get(i).getCatId() == 1)
+                gifsTopRated.add(gifs.get(i));
+        }
+        return gifsTopRated;
+    }
+
+
+    public List<gif> findAnimals() {
+        List<gif> gifsMostPopular = new ArrayList<>();
+        for(int i = 0; i < gifs.size();i++) {
+            if (gifs.get(i).getCatId() == 3)
+                gifsMostPopular.add(gifs.get(i));
+        }
+        return gifsMostPopular;
+    }
+
+
+    public List<gif> findNew() {
+        List<gif> gifsNew = new ArrayList<>();
+        for(int i = 0; i < gifs.size();i++) {
+            if (gifs.get(i).getCatId() == 2)
+                gifsNew.add(gifs.get(i));
+        }
+        return gifsNew;
+    }
+
+
 }
 
 
