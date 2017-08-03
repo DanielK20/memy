@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.*;
 @Controller
 public class HelloController {
 
+
+
     GifDao gifDao = new GifDao();
     CategoryDao categoryDao = new CategoryDao();
 
@@ -22,7 +24,7 @@ public class HelloController {
 
     @GetMapping("/gifs/search")
     public String search(@RequestParam String q, ModelMap modelMap){
-    modelMap.addAttribute("gifs",gifDao.findOne(q));
+    modelMap.addAttribute("gifs",gifDao.findByName(q));
         return "home";
     }
 
