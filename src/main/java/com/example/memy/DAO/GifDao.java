@@ -77,7 +77,31 @@ public class GifDao {
         return gifsNew;
     }
 
+    public List<gif> findByNameCat(String name) {
+        List<gif> results = new ArrayList<>();
+        if (name.equals("Top Rated")) {
+            for (int i = 0; i < gifs.size(); i++) {
+                if (gifs.get(i).getCatId() == 1)
+                    results.add(gifs.get(i));
+            }
+        }
 
+        if (name.equals("Newest")) {
+            for (int i = 0; i < gifs.size(); i++) {
+                if (gifs.get(i).getCatId() == 2)
+                    results.add(gifs.get(i));
+            }
+        }
+
+        if (name.equals("Animals")) {
+            for (int i = 0; i < gifs.size(); i++) {
+                if (gifs.get(i).getCatId() == 3)
+                    results.add(gifs.get(i));
+            }
+        }
+
+        return results;
+    }
 
 }
 
