@@ -2,9 +2,9 @@ package com.example.memy.model;
 
 public class category {
     private String name;
-    private int id;
+    private Long id;
 
-    public category(String name, int id) {
+    public category(String name, Long id) {
         this.name = name;
         this.id = id;
     }
@@ -17,11 +17,11 @@ public class category {
         this.name = name;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 }
