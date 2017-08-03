@@ -7,7 +7,7 @@ import com.example.memy.model.category;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CategoryDao {
+public class  CategoryDao {
 
     private static List<category> categories = new ArrayList<>();
 

@@ -5,14 +5,25 @@ public class gif {
     private Boolean isLike;
     private int catId;
 
+    private String username;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public gif() {
 
     }
 
-    public gif(String name, Boolean isLike, int catId) {
+    public gif(String name, Boolean isLike, int catId, String username) {
         this.name = name;
         this.isLike = isLike;
         this.catId = catId;
+        this.username = username;
     }
 
     public int getCatId() {
