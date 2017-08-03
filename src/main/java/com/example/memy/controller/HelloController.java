@@ -65,9 +65,8 @@ public class HelloController {
         return "category";
     }
 
-    @GetMapping("/api/categories")
-    public List<category> listCategories(){
-        CategoryDao categoryDao = new CategoryDao();
-        return categoryDao.showAllCategory();
+@GetMapping("/category")
+    public String searchByCategory(ModelMap modelMap){
+return "category";
     }
 }

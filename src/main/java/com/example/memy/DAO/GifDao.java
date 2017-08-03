@@ -10,12 +10,12 @@ public class GifDao {
     private static List<gif> gifs = new ArrayList<>();
 
     static {
-        gifs.add(new gif("android-explosion", true,1));
-        gifs.add(new gif("ben-and-mike", false,2));
-        gifs.add(new gif("book-dominos", false,3));
-        gifs.add(new gif("compiler-bot", true,3));
-        gifs.add(new gif("cowboy-coder", false,3));
-        gifs.add(new gif("infinite-andrew", false,2));
+        gifs.add(new gif("android-explosion", true,1,"Daniel"));
+        gifs.add(new gif("ben-and-mike", false,2,"Kuba"));
+        gifs.add(new gif("book-dominos", false,3,"Adolf"));
+        gifs.add(new gif("compiler-bot", true,3,"Herman"));
+        gifs.add(new gif("cowboy-coder", false,3,"Josef"));
+        gifs.add(new gif("infinite-andrew", false,2,"Otto"));
 
     }
     public List<gif> showAll() {
@@ -76,6 +76,7 @@ public class GifDao {
         }
         return gifsNew;
     }
+
 
 
 }
