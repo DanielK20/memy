@@ -28,7 +28,7 @@ public class HelloController {
 
 
     @GetMapping("/categories")
-    public String hello2( ModelMap modelMap){
+    public String hello3( ModelMap modelMap){
         modelMap.addAttribute("categories", categoryDao.showAllCategory() );
         return "categories";
     }
